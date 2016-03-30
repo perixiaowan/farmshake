@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>摇一摇，跟老乡去山沟买年货</title>
+
+
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.2.7.min.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+   
+    <link rel="stylesheet" href="css/shake.css"  media="all">
+  
+
+
+    <!-- 图片洗牌css -->
+    <link rel="stylesheet" type="text/css" href="css/windy.css" />
+    <link rel="stylesheet" type="text/css" href="css/style1.css" />
+
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/ProgressBarWars.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-3.2.7.min.js"></script>
+
+   <!--  图片洗牌js -->
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+</head>
+<body>
+    <div style="display:none;">
+            <p>摇一摇，跟老乡去山沟买年货</p >
+            <img src="http://www.xinhuatone.com/zt/20160206/farmshake/images/fx300.jpg">
+      </div>
+    <div class="loading"> 
+          <div class="progress" id="vaderTime"></div>
+          <div class="progress_font">一大波美味正在袭来<p>请耐心……</p></div>
+          <script>
+            $("#vaderTime").ProgressBarWars({porcentaje:100,estilo:"vader",tiempo:10000});         
+          </script>
+    </div>
+  
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="numone">
+                <div class="fm02">
+                    <!-- controls="controls"  poster="images/aa.jpg"-->
+                    <video id="myVideo" controls="controls" class="farm-video">
+                        <source src="http://video.xinhuatone.com/qyy/farm_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <span></span>
+                    <div class="tips1">向上滑动开始摇一摇</div>           
+                </div>
+            </div>
+            <div class="swiper-slide" id="numtwo">
+                <div class="fm1">
+                    <div class="fmy1"><img id="shake" src="images/yaoyiyao.png" alt="yaoyiyao" style="width:100%;height:100%"></div>
+                    <div class="fmp1" id="fmp1-img">
+                       <!--  src="images/farm_1.png" name="farm_1" -->
+                        <img class="fmpg1" id="farm_introduction" style="width:100%" src="images/farm_0.png" name="farm_0">
+                    </div>
+                    <div class="next">
+                       <div>
+                            <span></span>
+                            <div class="tips2 hide">点击图片查看农产品详细信息</div>  
+                            <div class="tips1 tips3 hide" >继续摇一摇</div>
+                      </div>
+
+                    </div><!-- 
+                     -->
+                    <div class="fmb1"><img id="beginshake" src="images/beginshake.png" alt="开始摇一摇" style="width:100%;height:100%"></div>
+                </div>
+                
+            </div>
+            <div class="swiper-slide" id="numthree">
+               <!--  <div class="fd1"></div>
+                <div class="fd2"></div> -->
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div>
+        <audio id="music1" class="audio"  src="music/1.mp3"  >
+        您的浏览器不支持 audio 标签。
+        </audio> 
+         <audio id="music2" class="audio"  src="music/2.mp3"  >
+        您的浏览器不支持 audio 标签。
+        </audio> 
+    </div>
+    <div class="al-maskboard"></div>
+    <!-- <div class="al-actionbar">
+        <span class="button" id="button-ok">关闭</span>
+    </div> -->
+    <div class="modal" id="farm_1">
+         
+        <section class="main">
+
+            <div class="windy-demo">
+                
+                <ul id="wi-el-1" class="wi-container">
+                    
+                    <li>
+                        <img src="images/farm1/1-1.jpg" alt="image1"/><h4>广西恭城月柿(1)</h4>
+                        <div class="modal-container">
+                            <p>“中国月柿之乡”广西恭城瑶族自治县盛产的恭城月柿个大、形圆、肉厚、质软、果肉脆嫩、清甜爽口，富含各种维生素和微量元素。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm1/1-2.jpg" alt="image2"/><h4>广西恭城月柿(2)</h4>
+                        <div class="modal-container">
+                            <p>优质的月柿通常会被加工成脆柿，而品相较差的月柿会被晾晒成柿饼。月柿的采摘和柿饼的制作一般从10月底开始，12月初结束。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm1/1-3.jpg" alt="image3"/><h4>广西恭城月柿(3)</h4>
+                        <div class="modal-container">
+                            <p>但是今年入冬以来，恭城县遭遇罕见的连续阴雨天气甚至冬汛。很多柿子出现黑色的水纹甚至开裂，果品质量下降，无法加工成脆柿销售，而由于没有阳光，品相较差的柿子在晾晒柿饼的过程中不断发霉被扔掉。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm1/1-4.jpg" alt="image4"/><h4>广西恭城月柿(4)</h4>
+                        <div class="modal-container">
+                            <p>恭城县水果流通办主任吴文龙介绍，去年优质月柿每斤的售价约为1.5元，而今年只有0.9至1元。用于制作柿饼的鲜柿去年每斤售价约为0.8元，而今年只有几分钱。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm1/1-5.jpg" alt="image5"/><h4>广西恭城月柿(5)</h4>
+                        <div class="modal-container">
+                            <p>“次果一斤只值几分钱，都不够人工成本和运输费，还不如让它烂在地里。”东科村贫困户刘远俊无奈地告诉记者。</p>
+                            <br>
+                            <p class="contect_phone">恭城县水果流通办联系电话：0773-8216656。</p>
+                        </div>
+                    </li>
+                    
+                </ul>
+                <nav>
+                    <span id="nav-prev-1" class='nav-prev'>prev</span>
+                    <span id="nav-next-1" class='nav-next'>next</span>
+                </nav>
+                <div class="al-actionbar"></div>
+            </div>
+            <!-- <p class="info"><strong>提示:</strong> 如果想要看连续的效果，用鼠标按住上面的小箭头.</p> -->
+        </section>
+    </div>
+    <div class="modal" id="farm_2">
+         
+         <section class="main">
+
+            <div class="windy-demo">
+                 
+                <ul id="wi-el-2" class="wi-container">    
+                    
+                    <li>
+                        <img src="images/farm2/2-1.jpg" alt="image1"/><h4>湖南怀化冰糖橙(1)</h4>
+                        <div class="modal-container">
+                            <p>湖南省怀化市麻阳县的冰糖橙栽培面积达20万亩，产量30万吨，占全国的1/4。相比去年冰糖橙销售的火热，今年本地收购和外地收购都大幅减少，急坏了麻阳县的农户。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm2/2-2.jpg" alt="image2"/><h4>湖南怀化冰糖橙(2)</h4>
+                        <div class="modal-container">
+                            <p>在麻阳县绿溪口乡大比田村，村桥头的停车坪因为没有货车而显得空空荡荡，垃圾堆里有许多烂掉的冰糖橙显得格外刺眼，数位村民在家门口边烤火边翘首以盼。 </p>
+                            <br>
+                            <p>只要看到陌生人来，村民都会上前询问：“是来收购冰糖橙的老板吗？”当得到否定的回答时，脸上露出掩饰不住的失望。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm2/2-3.jpg" alt="image3"/><h4>湖南怀化冰糖橙(3)</h4>
+                        <div class="modal-container">
+                            <p>“我们的冰糖橙之乡的品质非常好，特别甜！”但是种植大户莫洪全谈起今年的冰糖橙不断的摇头，“我家里16万斤冰糖橙一个都没卖出去，还有6万多斤在树上，都不敢摘下来。”。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm2/2-4.jpg" alt="image4"/><h4>湖南怀化冰糖橙(4)</h4>
+                        <div class="modal-container">
+                            <p>老莫指着果园，“现在工价200块一天，摘的人都要90到100，按现在的销售价，根本不敢摘下来，摘下来顶多只够人工费，而且还不一定卖得出去。”</p>
+                            <br>
+                            <p class="contect_phone">湖南省怀化市麻阳县柑桔办主任胡成：13974573581</p>
+                        </div>
+                    </li>
+                   
+                    
+                </ul>
+                <nav>
+                    <span id="nav-prev-2" class='nav-prev'>prev</span>
+                    <span id="nav-next-2" class='nav-next'>next</span>
+                </nav>
+                 <div class="al-actionbar"></div>
+            </div>
+            <!-- <p class="info"><strong>提示:</strong> 如果想要看连续的效果，用鼠标按住上面的小箭头.</p> -->
+        </section>
+    </div>
+    <div class="modal" id="farm_3">
+        
+        <section class="main">
+
+            <div class="windy-demo">
+               
+                <ul id="wi-el-3" class="wi-container">
+                     
+                    <li>
+                        <img src="images/farm3/3-1.jpg" alt="image1"/><h4>山东蒙阴县苹果和板栗(1)</h4>
+                        <div class="modal-container">
+                            <p>山东省蒙阴县野店镇毛坪村，一年前可以卖到3-4元/斤的红富士，现在只有1.5元/斤的出库均价，目前冷藏库里还储存着来自毛坪村及附近的3000万斤苹果。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm3/3-2.jpg" alt="image2"/><h4>山东蒙阴县苹果和板栗(2)</h4>
+                        <div class="modal-container">
+                            <p>“农民把苹果放进冷藏库，就是赌博。”宗路果品专业合作社理事长刘宗路说，等待春节期间销售并不一定有好价钱，在市场供大于求的现实关系中，农民是弱势者。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm3/3-3.jpg" alt="image3"/><h4>山东蒙阴县苹果和板栗(3)</h4>
+                        <div class="modal-container">
+                            <p>在合作社院中，记者看到有四辆货车正在装载苹果即将运往临沂市、安徽、江苏等周边地区，每天可以出库7-8万斤苹果。去年同期已经可以出售库存总量的三分之一，而今年还不到十分之一。按照这样的速度出售，现在的库存还需要消化一年的时间。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm3/3-4.jpg" alt="image4"/><h4>山东蒙阴县苹果和板栗(4)</h4>
+                        <div class="modal-container">
+                            <p>记者来到68岁张兆花老人的地窖中，仍然有二三十袋包装好的苹果等待收购。他们家中有十亩左右果园，这由她和老伴照顾的苹果林是他们家庭的主要经济来源。</p>
+                            <br>
+                            <p class="contect_phone">山东临沂蒙阴县野店毛坪村合作社理事长刘宗路电话：13854970368</p>
+                        </div>
+                    </li>
+                     <li>
+                        <img src="images/farm3/3-5.jpg" alt="image5"/><h4>山东蒙阴县苹果和板栗(5)</h4>
+                        <div class="modal-container">
+                            <p>今年的毛坪村，滞销的不仅仅是苹果，还有板栗。</p>
+                            
+                            <p>“我们村的板栗经过冷库储存之后变得又面又甜，往年在市场是很抢手的，煮或者炒之后都很好吃。”负责村合作社网络销售的刘胜勇说，“我们今年通过网络卖出的生板栗只有2万斤左右，大头还是卖给批发市场。目前，八个冷藏库已经卖出了四个，还有一半库存（接近2000万斤）待售。”</p>
+                        </div>
+                        </li>
+                    <li>
+                        <img src="images/farm3/3-6.jpg" alt="image6"/><h4>山东蒙阴县苹果和板栗(6)</h4>
+                        <div class="modal-container">
+                            <p>另一方面，种植板栗利润很低，板栗秋季入冷库的收购价只有3元／斤，而管理、加工成本上升，加之产量少，“半面山最多才产200斤”，从种植到板栗收获入库，农户正好保本。</p>
+                            <br>
+                            <p class="contect_phone">村合作社网络销售刘胜勇电话：15064911066</p>
+                        </div>
+                    </li>
+                </ul>
+                <nav>
+                    <span id="nav-prev-3" class='nav-prev'>prev</span>
+                    <span id="nav-next-3" class='nav-next'>next</span>
+                </nav>
+                <div class="al-actionbar"></div>
+            </div>
+            <!-- <p class="info"><strong>提示:</strong> 如果想要看连续的效果，用鼠标按住上面的小箭头.</p> -->
+        </section>
+    </div>
+    <div class="modal" id="farm_4">
+        
+        <section class="main">
+
+            <div class="windy-demo">
+                
+                <ul id="wi-el-4" class="wi-container">
+                   
+                    <li>
+                        <img src="images/farm4/4-1.jpg" alt="image1"/><h4>青海河南县牛肉(1)</h4>
+                        <div class="modal-container">
+                            <p>拉毛才让，家住青海省黄南藏族自治州河南蒙古族自治县优干宁镇泽雄村。拉毛才让全家6口人，平时，他在草场放牧，妻子在家照顾两位老人和两个孩子，家庭负担较重。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm4/4-2.jpg" alt="image2"/><h4>青海河南县牛肉(2)</h4>
+                        <div class="modal-container">
+                            <p>近年来，拉毛才让家的牛群数量被控制到50头左右，每年出栏销售15头。近几年，河南县致力于打造青藏高原有机畜牧业基地，当地生产的有机绿色牦牛肉因肉质鲜美，营养价值高而受到市场欢迎，牦牛肉价格一度达到每斤30元。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm4/4-3.jpg" alt="image3"/><h4>青海河南县牛肉(3)</h4>
+                        <div class="modal-container">
+                            <p>拉毛才让说，今年牛肉市场不景气，再加上严寒气候影响交通，物流长途运力有限，以往能卖上万元的一头牦牛今年只能3500元卖到河南县周边地区。目前，还有10头本该出栏的牦牛没有宰杀，草料价格昂贵，这让一家人感到忧愁。</p>
+                            
+                            <p class="contect_phone">拉毛才让电话：15897031357</p>
+                        </div>
+                    </li>
+                </ul>
+                <nav>
+                    <span id="nav-prev-4" class='nav-prev'>prev</span>
+                    <span id="nav-next-4" class='nav-next'>next</span>
+                </nav>
+                 <div class="al-actionbar"></div>
+            </div>
+            <!-- <p class="info"><strong>提示:</strong> 如果想要看连续的效果，用鼠标按住上面的小箭头.</p> -->
+        </section>
+    </div>
+    <div class="modal" id="farm_5">
+        
+        <section class="main">
+
+            <div class="windy-demo">
+                
+                <ul id="wi-el-5" class="wi-container">
+                   
+                    <li>
+                        <img src="images/farm5/5-1.jpg" alt="image1"/><h4>山西临县红枣(1)</h4>
+                        <div class="modal-container">
+                            <p>位于山西省西部的临县是全国产枣大县。山西红枣果实大肥硕，肉厚核小，味道甘美。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm5/5-2.jpg" alt="image2"/><h4>山西临县红枣(2)</h4>
+                        <div class="modal-container">
+                            <p>今年临县红枣获丰收，但由于销路不畅，漫山遍野被农民弃收的红枣都烂在了地里。“现在连羊都不吃了”克虎镇薛家垛村的薛海亮告诉记者。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm5/5-3.jpg" alt="image3"/><h4>山西临县红枣(3)</h4>
+                        <div class="modal-container">
+                            <p>当地虽已采取诸多措施力图就地消化或拓展销路，但仍杯水车薪，大量红枣贮屯在晾房无人问津。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm5/5-4.jpg" alt="image4"/><h4>山西临县红枣(4)</h4>
+                        <div class="modal-container">
+                            <p>这是薛家垛村的一个红枣专业合作社，日初加工能力7000公斤。薛家垛村共有约400户村民，今年每户产枣约10000公斤。由于订单不足，今年企业开工率不高。</p>
+                            <br>
+                            <p class="contect_phone">山西临县红枣产业局 秦雨峰18335851614</p>
+                        </div>
+                    </li>
+                </ul>
+                <nav>
+                    <span id="nav-prev-5" class='nav-prev'>prev</span>
+                    <span id="nav-next-5" class='nav-next'>next</span>
+                </nav>
+                 <div class="al-actionbar"></div>
+            </div>
+            <!-- <p class="info"><strong>提示:</strong> 如果想要看连续的效果，用鼠标按住上面的小箭头.</p> -->
+        </section>
+    </div>
+
+
+
+    <div class="modal" id="farm_6">
+        
+        <section class="main">
+
+            <div class="windy-demo">
+                
+                <ul id="wi-el-6" class="wi-container">
+                   
+                    <li>
+                        <img src="images/farm6/6-1.jpg" alt="image1"/><h4>陕西汉中核桃书(1)</h4>
+                        <div class="modal-container">
+                            <p>来自秦岭山区的刘义超是返乡务农青年中的一员，因为带领乡亲们养蜂采蜜，被大家亲切地称为“刘蜜书”。大学毕业后，他为了照顾患有抑郁症的母亲，从西安回到了家乡汉中。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm6/6-2.jpg" alt="image2"/><h4>陕西汉中核桃书(2)</h4>
+                        <div class="modal-container">
+                            <p>经过不断的失败和摸索，刘义超用当地优质蜂蜜、核桃，生产出了被称作“核桃书”的零食。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm6/6-3.jpg" alt="image3"/><h4>陕西汉中核桃书(3)</h4>
+                        <div class="modal-container">
+                            <p>正当他努力为秦岭山区农产品打开春节销路的时候，却在遭遇了罕见的低温。</p>
+                            <br>
+                            <p>“20多年没有这么低的气温，”刘义超告诉记者，“我们有大量的蜜蜂被冻死，蜂蜜今年减产50%以上。”</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm6/6-4.jpg" alt="image4"/><h4>陕西汉中核桃书(4)</h4>
+                        <div class="modal-container">
+                            <p>面对贫困的家乡，刘义超说，“我最希望的就是村民不用再外出打工，在家就能赚到钱，也能照顾家里的老人、孩子。”</p>
+                            <br>
+                            <p class="contect_phone">返乡青年刘义超电话：18391612323</p>
+                        </div>
+                    </li>
+                </ul>
+                <nav>
+                    <span id="nav-prev-6" class='nav-prev'>prev</span>
+                    <span id="nav-next-6" class='nav-next'>next</span>
+                </nav>
+                 <div class="al-actionbar"></div>
+            </div>
+            
+        </section>
+    </div>
+
+
+     <div class="modal" id="farm_7">
+        
+        <section class="main">
+
+            <div class="windy-demo">
+                
+                <ul id="wi-el-7" class="wi-container">
+                   
+                    <li>
+                        <img src="images/farm7/7-1.jpg" alt="image1"/><h4>云南怒江蜂蜜(1)</h4>
+                        <div class="modal-container">
+                            <p>“最险峻的山谷，会开出最美的花”——云南怒江州，这里自然条件恶劣，基础设施薄弱，却保留了最原始美丽的自然风貌。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm7/7-2.jpg" alt="image2"/><h4>云南怒江蜂蜜(2)</h4>
+                        <div class="modal-container">
+                            <p>怒江州是云南省扶贫攻坚的“上甘岭”和最难啃的硬骨头，是全省唯一无高速路、无机场、无铁路、无水运、无管道运输的“五无”州市。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm7/7-3.jpg" alt="image3"/><h4>云南怒江蜂蜜(3)</h4>
+                        <div class="modal-container">
+                            <p>与此同时，位于云南西北部的怒江大峡谷原始森林密布，珍稀植物繁多。当地野生中华蜂采集的百花蜜的品质远高于超市蜂蜜。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/farm7/7-4.jpg" alt="image4"/><h4>云南怒江蜂蜜(4)</h4>
+                        <div class="modal-container">
+                            <p>当地人还仿野生种植石斛和当归，不施肥打药，让其自然生长，因为当地人坚信，自然的就是最好的。</p>
+                            <br>
+                            <p class="contect_phone">云南省福贡县公益志愿者张晓东 13508866270</p>
+                        </div>
+                    </li>
+                </ul>
+                <nav>
+                    <span id="nav-prev-7" class='nav-prev'>prev</span>
+                    <span id="nav-next-7" class='nav-next'>next</span>
+                </nav>
+                 <div class="al-actionbar"></div>
+            </div>
+            
+        </section>
+    </div>
+   
+    <!-- 图片洗牌切换效果 -->
+    <script type="text/javascript" src="js/jquery.windy.js"></script>
+    <!-- Initialize Swiper -->
+    <script type="text/javascript" src="js/page.js"></script>
+   
+    <!--    摇一摇动画 -->
+    <script type="text/javascript" src="js/shake.js"></script>
+
+    
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-72415715-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+   
+
+
+    <div style="display:none;">
+        <script src="http://s95.cnzz.com/z_stat.php?id=1254115685&amp;web_id=1254115685" language="JavaScript"></script>
+    </div>
+</body>
+</html>
+
